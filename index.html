@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Happy Birthday</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+      font-family: 'Inconsolata' !important;
+      src: url('Inconsolata.otf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44608387-1', 'simonmysun.github.io');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+<div style="position:relative">
+  <div style="position:absolute;left:0;top:0">
+  	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+
+	<span style="color:#FFFFFF">
+							<big>
+								yoyoyo~<br/>
+								又是好久不见<br/>
+								上次见面已是一周前<br/>
+								不知你是否也有些许想念<br/>
+								我想你已收到好多礼物<br/>
+								今天也已收到好多祝福<br/>
+								而我也憋着一些话语<br/>
+								希望控制语速像你倾诉<br/>
+								过了今天又大了一岁<br/>
+								你千万不要像我一样品尝苦味<br/>
+								为了你的梦你不会疲惫<br/>
+								你会永远把握当下活的干脆<br/>				
+							</big>
+						</span>
+
+
+<span style='color:#FFFFFF; '>
+    <big>
+	你是唯一的小宇，但不要怪我，因为我不姓许<br/>
+	今天是你的生日<br/>
+    就让快乐充满你的心里，让我背上梦的行李<br/>
+    我希望我能把生日快乐带回给你！<br/>
+</big>
+</span></pre>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Li Xiao Yu, you've lived for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						You are very cute, <br />
+						I hope you will happy forever!<br/>
+						<span style="color:#FFFFFF">
+							<big>
+								Happy Birthday!
+							</big>
+						</span>
+						<br />
+						<div class="signature">
+							- Beauty
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Provided by  <br />Xc <br />
+		</div>
+	</div>
+</div>
+  <div style="position:absolute;left:0;top:0">
+    <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+  </div>
+
+</div>
+  <script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(1996, 2, 5);
+		together.setHours(10);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+  </script>
+  <script type="text/javascript" src="js/fireworks.js"></script>
+  
+</body>
+</html>
